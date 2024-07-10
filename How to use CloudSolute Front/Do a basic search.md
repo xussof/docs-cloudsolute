@@ -1,0 +1,2 @@
+Search for any string written in milions of videos using OCR
+Search through our vast database of videos with just a keyboard, and let our search engine, find the right videos where this word appears WRITTEN in the screen, showing you the videos and the seconds where this word appears.
