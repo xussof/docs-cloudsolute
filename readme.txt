@@ -9,3 +9,6 @@ http://localhost:5000
 Once change done push the changes and the pipeline will run and deploy the changes to the server.
 
 https://docs.cloudsolute.net
+
+Docs de retype:
+https://retype.com/
