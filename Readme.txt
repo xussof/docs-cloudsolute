@@ -10,5 +10,8 @@ Once change done push the changes and the pipeline will run and deploy the chang
 
 https://docs.cloudsolute.net
 
+DO NOT TOUCH retype branch, it is used for the pipeline to deploy the changes to the server.
+If you want to create a branch do it from main branch.
+
 Docs de retype:
 https://retype.com/
