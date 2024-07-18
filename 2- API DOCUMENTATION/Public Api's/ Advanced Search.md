@@ -54,13 +54,15 @@ _ channel_name (string): The name of the channel to be searched.
 ##### Body Example:
 
 ```
+Creo que no estaba antes, tambien he añadido que se tenga que enviar el token en vez del user email con cada llamada:
+Ejemplo de llamada:
 {
-    "user_token": "ey...",
+    "user_token": "ey",
     "page_size": 10,
-    "offset_page": “0”,
-    "search_string": "history",
+    "offset_page": "0",
+    "search_string": "Thaank",
     "platform": "youtube",
-    "video_id": "XcljQpU6dc4,GQa931EQkOk",
+    "video_id": "XcljQpU6dc4,GQa931EQkOk"
     "title": "black",
     "channel_name": "envatotuts",
     "tags": "html, javascript",
@@ -85,15 +87,13 @@ _ channel_name (string): The name of the channel to be searched.
 #### Answer 200:
 ```
 {
+    "advanced_search_left": 5,
     "message": "Results found",
     "result": [
         {
             "data": [
                 {
-                    "id": "GQa931EQkOk"
-                },
-                {
-                    "id": "XcljQpU6dc4"
+                    "id": "HD48zAa-4sk"
                 }
             ]
         }
@@ -102,23 +102,24 @@ _ channel_name (string): The name of the channel to be searched.
 }
 ```
 
-#### Answer 404:
+#### Answer 401:
 ```
 {
-    "message": "Please authentificate first",
+    "message": "Token Invalid",
     "result": [],
-    "status": 403
+    "status": 401
 }
 
 ```
 
-or:
+#### Answer 404:
 
 ```
 {
-    "message": "You have no advanced searches left",
+    "advanced_search_left": 4,
+    "message": "No results found on business function: advanced_search_string_with_pagination_get_vidid ",
     "result": [],
-    "status": 403
+    "status": 404
 }
 ```
 
