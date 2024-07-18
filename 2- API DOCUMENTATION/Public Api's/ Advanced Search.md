@@ -55,7 +55,7 @@ _ channel_name (string): The name of the channel to be searched.
 
 ```
 {
-    "user_token": "ey",
+    "user_token": "ey..",
     "page_size": 10,
     "offset_page": "0",
     "search_string": "Thaank",
