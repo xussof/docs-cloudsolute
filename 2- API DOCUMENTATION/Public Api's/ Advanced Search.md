@@ -54,8 +54,6 @@ _ channel_name (string): The name of the channel to be searched.
 ##### Body Example:
 
 ```
-Creo que no estaba antes, tambien he añadido que se tenga que enviar el token en vez del user email con cada llamada:
-Ejemplo de llamada:
 {
     "user_token": "ey",
     "page_size": 10,
