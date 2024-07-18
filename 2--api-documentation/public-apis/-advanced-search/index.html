@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774032902127">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774616331623">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.774032902127" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.774616331623" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.774032902127" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.774616331623" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.774032902127" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.774616331623" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -258,13 +258,15 @@ _ channel_name (string): The name of the channel to be searched.</li>
     </h5>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">{
-    &quot;user_token&quot;: &quot;ey...&quot;,
+<pre class="language-none"><code v-pre class="language-none">Creo que no estaba antes, tambien he añadido que se tenga que enviar el token en vez del user email con cada llamada:
+Ejemplo de llamada:
+{
+    &quot;user_token&quot;: &quot;ey&quot;,
     &quot;page_size&quot;: 10,
-    &quot;offset_page&quot;: “0”,
-    &quot;search_string&quot;: &quot;history&quot;,
+    &quot;offset_page&quot;: &quot;0&quot;,
+    &quot;search_string&quot;: &quot;Thaank&quot;,
     &quot;platform&quot;: &quot;youtube&quot;,
-    &quot;video_id&quot;: &quot;XcljQpU6dc4,GQa931EQkOk&quot;,
+    &quot;video_id&quot;: &quot;XcljQpU6dc4,GQa931EQkOk&quot;
     &quot;title&quot;: &quot;black&quot;,
     &quot;channel_name&quot;: &quot;envatotuts&quot;,
     &quot;tags&quot;: &quot;html, javascript&quot;,
@@ -291,21 +293,33 @@ _ channel_name (string): The name of the channel to be searched.</li>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">{
+    &quot;advanced_search_left&quot;: 5,
     &quot;message&quot;: &quot;Results found&quot;,
     &quot;result&quot;: [
         {
             &quot;data&quot;: [
                 {
-                    &quot;id&quot;: &quot;GQa931EQkOk&quot;
-                },
-                {
-                    &quot;id&quot;: &quot;XcljQpU6dc4&quot;
+                    &quot;id&quot;: &quot;HD48zAa-4sk&quot;
                 }
             ]
         }
     ],
     &quot;status&quot;: 200
 }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="answer-401">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#answer-401">#</doc-anchor-trigger>
+        <span>Answer 401:</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">{
+    &quot;message&quot;: &quot;Token Invalid&quot;,
+    &quot;result&quot;: [],
+    &quot;status&quot;: 401
+}
+</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="answer-404">
     <h4>
@@ -315,18 +329,10 @@ _ channel_name (string): The name of the channel to be searched.</li>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">{
-    &quot;message&quot;: &quot;Please authentificate first&quot;,
+    &quot;advanced_search_left&quot;: 4,
+    &quot;message&quot;: &quot;No results found on business function: advanced_search_string_with_pagination_get_vidid &quot;,
     &quot;result&quot;: [],
-    &quot;status&quot;: 403
-}
-</code></pre>
-</doc-codeblock></div>
-<p>or:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">{
-    &quot;message&quot;: &quot;You have no advanced searches left&quot;,
-    &quot;result&quot;: [],
-    &quot;status&quot;: 403
+    &quot;status&quot;: 404
 }</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="answer-500">
